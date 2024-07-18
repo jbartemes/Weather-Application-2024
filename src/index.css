@@ -11,6 +11,30 @@ body {
   background-attachment: fixed;
 }
 
+h1 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 0;
+}
+
+.weather-app-temperature-container {
+  display: flex;
+  justify-content: center;
+  font-size: 70px;
+  font-weight: bold;
+  color: #ef3c68;
+}
+
+.weather-app-unit {
+  margin: 15px 0;
+  font-size: 18px;
+}
+
+.weather-app-emoji {
+  margin: 10px 5px;
+  font-size: 40px;
+}
+
 .weather-form {
   display: block;
   margin: auto;
