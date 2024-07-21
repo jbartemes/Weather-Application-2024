@@ -11,18 +11,23 @@ body {
   background-attachment: fixed;
 }
 
-h1 {
+.weather-app-city {
   text-align: center;
   font-size: 32px;
   margin-bottom: 0;
+  color: #ef3c68;
 }
 
 .weather-app-temperature-container {
   display: flex;
   justify-content: center;
-  font-size: 70px;
-  font-weight: bold;
   color: #ef3c68;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.weather-app-temperature {
+  font-size: 70px;
 }
 
 .weather-app-unit {
@@ -33,6 +38,17 @@ h1 {
 .weather-app-emoji {
   margin: 10px 5px;
   font-size: 40px;
+}
+
+.weather-app-details-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  text-align: center;
+  color: #ef3c68;
+  margin: 10px 0;
 }
 
 .weather-form {

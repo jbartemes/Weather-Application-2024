@@ -4,39 +4,50 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather App 2024</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
-<link rel="stylesheet" href="src/index.css" />  
-<body>
+  <link rel="stylesheet" href="src/index.css" />
+  <body>
     <header>
-        <form class="weather-form">
-        <input type="search" placeholder="Enter a city.." class="weather-search-form" required />
-        <input type="submit" value="Search" class="weather-submit-form"/>
-    </form>
-</header>
+      <form class="weather-form">
+        <input
+          type="search"
+          placeholder="Enter a city.."
+          class="weather-search-form"
+          required
+        />
+        <input type="submit" value="Search" class="weather-submit-form" />
+      </form>
+    </header>
     <main class="weather-app">
-<div> <h1>Paris | Tuesday, 14:49</h1> </div>
-           <div class="weather-app-temperature-container">
-            <span class="weather-app-emoji">☀️</span>
-            <span class="weather-app-temperature">12</span>
-            <span class="weather-app-unit">°F|°C</span>
-        </div>
+      <div><h1 class="weather-app-city">Paris | Tuesday, 14:49</h1></div>
+      <div class="weather-app-temperature-container">
+        <span class="weather-app-emoji">☀️</span>
+        <span class="weather-app-temperature">12</span>
+        <span class="weather-app-unit">°F|°C</span>
+      </div>
 
-    <p>Scattered clouds
-        <br />
-        Humidity: 66%, Wind: 3.13km/h
-    </p>
-</main>
+      <div class="weather-app-details-container">
+        <div>Scattered clouds</div>
+        <div>Humidity: 66%</div>
+        <div>Wind: 3.13km/h</div>
+      </div>
+    </main>
     <footer class="footer">
-      This project was coded by <a href="https://github.com/jbartemes">Jess Bartemes,</a> is
+      This project was coded by
+      <a href="https://github.com/jbartemes">Jess Bartemes,</a> is
       <a href="https://github.com/jbartemes/Weather-Application-2024"
-        >open sourced on Github</a> and
-        <a href="https://shecodes-weather-application-2024.netlify.app/"
-          >hosted on Netlify</a
-        >.
-      </a>
+        >open sourced on Github</a
+      >
+      and
+      <a href="https://shecodes-weather-application-2024.netlify.app/"
+        >hosted on Netlify</a
+      >.
     </footer>
   </body>
 </html>
