@@ -10,6 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
   </head>
   <link rel="stylesheet" href="src/index.css" />
   <body>
@@ -36,9 +37,9 @@
       </div>
 
       <div class="weather-app-details-container">
-        <div>Scattered clouds</div>
-        <div>Humidity: 66%</div>
-        <div>Wind: 3.13km/h</div>
+        <div id="weather-description">Scattered clouds</div>
+        <div id="weather-humidity">Humidity: 66%</div>
+        <div id="weather-wind-speed">Wind: 3.13km/h</div>
       </div>
     </main>
     <footer class="footer">
