@@ -14,10 +14,11 @@
   <link rel="stylesheet" href="src/index.css" />
   <body>
     <header>
-      <form class="weather-form">
+      <form class="weather-form" id="search-form">
         <input
           type="search"
           placeholder="Enter a city.."
+          id="search-form-input"
           class="weather-search-form"
           required
         />
@@ -25,7 +26,9 @@
       </form>
     </header>
     <main class="weather-app">
-      <div><h1 class="weather-app-city">Paris | Tuesday, 14:49</h1></div>
+      <div>
+        <h1 class="weather-app-city" id="city">Paris | Tuesday, 14:49</h1>
+      </div>
       <div class="weather-app-temperature-container">
         <span class="weather-app-emoji">☀️</span>
         <span class="weather-app-temperature">12</span>
@@ -49,5 +52,7 @@
         >hosted on Netlify</a
       >.
     </footer>
+
+    <script src="index.js"></script>
   </body>
 </html>
