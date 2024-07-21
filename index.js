@@ -1,3 +1,4 @@
+//Capability to refresh the weather elements
 function refreshWeather(response) {
   let temperatureElement = document.querySelector("#temperature");
   let temperature = response.data.temperature.current;
@@ -15,6 +16,34 @@ function refreshWeather(response) {
 
   let windElement = document.querySelector("#weather-wind-speed");
   windElement.innerHTML = `Wind: ${response.data.wind.speed}mph`;
+
+  let date = new Date(response.data.time * 1000);
+
+  let timeElement = document.querySelector("#time");
+  timeElement.innerHTML = `| ${formatDate(date)}`;
+}
+
+//Weather City and Date header
+function formatDate(date) {
+  let hours = date.getHours();
+  let minutes = date.getMinutes();
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+    "Sunday",
+  ];
+  let day = days[date.getDay()];
+
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+
+  return `${day}, ${hours}:${minutes}`;
 }
 
 function searchCity(city) {
@@ -39,21 +68,3 @@ let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearchSubmit);
 
 //Weather Form API - Descriptions
-//function weatherForm(response) {
-//let descriptionElement = document.querySelector("#weather-description");
-//let description = response.data.description;
-//descriptionElement.innerHTML = description;
-//}
-
-//let city = document.querySelector("#search-form");
-//city.addEventListener("submit", weatherForm);
-
-//weather-app-temperature
-
-//weather-description
-//weather-humidity
-//weather-wind-speed
-
-//let cityElement = document.querySelector("#current-location");
-//let city = response.data.city;
-// cityElement.innerHTML = city;
