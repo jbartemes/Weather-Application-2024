@@ -16,6 +16,7 @@ body {
   font-size: 32px;
   margin-bottom: 0;
   color: #ef3c68;
+  font-weight: bold;
 }
 
 .weather-app-temperature-container {
@@ -37,6 +38,7 @@ body {
 
 .weather-app-emoji {
   width: 70px;
+  padding-top: 5px;
 }
 
 .weather-app-details-container {
@@ -76,6 +78,7 @@ body {
   border-color: white;
   border-width: 2px;
   background-color: transparent;
+  color: white;
 }
 
 input::placeholder {
@@ -99,11 +102,11 @@ input::placeholder {
 }
 
 a {
-  color: pink;
+  color: #ef3c68;
 }
 
 a:hover {
-  color: blueviolet;
+  color: #3c9946;
 }
 
 .weather-app {
