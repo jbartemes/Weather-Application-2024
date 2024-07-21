@@ -31,13 +31,12 @@ body {
 }
 
 .weather-app-unit {
-  margin: 15px 0;
+  padding: 15px 0 30px 5px;
   font-size: 18px;
 }
 
 .weather-app-emoji {
-  margin: 10px 5px;
-  font-size: 40px;
+  width: 70px;
 }
 
 .weather-app-details-container {
