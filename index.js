@@ -6,12 +6,21 @@ function refreshWeather(response) {
   cityElement.innerHTML = response.data.city;
 
   temperatureElement.innerHTML = Math.round(temperature);
+
+  let descriptionElement = document.querySelector("#weather-description");
+  descriptionElement.innerHTML = response.data.condition.description;
+
+  let humidityElement = document.querySelector("#weather-humidity");
+  humidityElement.innerHTML = `Humidity: ${response.data.temperature.humidity}%`;
+
+  let windElement = document.querySelector("#weather-wind-speed");
+  windElement.innerHTML = `Wind: ${response.data.wind.speed}mph`;
 }
 
 function searchCity(city) {
   //make API call and update the interface
   let apiKey = `ft4830boc9b9a345e3ffa44748c5cd48`;
-  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=imperial`;
 
   axios.get(apiUrl).then(refreshWeather);
 }

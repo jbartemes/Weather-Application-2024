@@ -41,14 +41,27 @@ body {
 }
 
 .weather-app-details-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   width: 100%;
-  text-align: center;
+  grid-template-columns: repeat(3, 1fr);
   color: #ef3c68;
   margin: 10px 0;
+}
+
+.weather-description {
+  flex: 1;
+  text-align: center;
+}
+
+.weather-wind-speed {
+  flex: 1;
+  text-align: center;
+}
+
+.weather-humidity {
+  flex: 1;
+  text-align: center;
 }
 
 .weather-form {
