@@ -59,23 +59,37 @@ function getForecast(city) {
   console.log(apiUrl);
 }
 
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let days = ["Sun", "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat", "Sun"];
+
+  return days[date.getDay()];
+}
+
 function displayForecast(response) {
   console.log(response.data);
 
-  let days = [`Tue`, `Wed`, `Thurs`, `Fri`, `Sat`];
   let forecastHtml = "";
 
-  days.forEach(function (day) {
-    forecastHtml =
-      forecastHtml +
-      `<div class="weather-forecast-day">
-          <div class="weather-forecast-date">${day}</div>
-          <div class="weather-forecast-icon">☀️</div>
+  response.data.daily.forEach(function (day, index) {
+    if (index < 5) {
+      forecastHtml =
+        forecastHtml +
+        `<div class="weather-forecast-day">
+          <div class="weather-forecast-date">${formatDay(day.time)}</div>
+          <div>
+          <img src="${day.condition.icon_url}" class="weather-forecast-icon" />
+          </div>
           <div class="weather-forecast-temperatures">
-            <div class="weather-forecast-high">15°</div>
-            <div class="weather-forecast-low">9°</div>
+            <div class="weather-forecast-high">${Math.round(
+              day.temperature.maximum
+            )}°</div>
+            <div class="weather-forecast-low">${Math.round(
+              day.temperature.minimum
+            )}°</div>
           </div>
         </div>`;
+    }
   });
 
   let forecastElement = document.querySelector("#forecast");
