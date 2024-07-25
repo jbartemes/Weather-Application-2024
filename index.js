@@ -12,13 +12,21 @@ function refreshWeather(response) {
 
   temperatureElement.innerHTML = Math.round(temperature);
   cityElement.innerHTML = response.data.city;
-  descriptionElement.innerHTML = response.data.condition.description;
+  descriptionElement.innerHTML = toTitleCase(
+    response.data.condition.description
+  );
   humidityElement.innerHTML = `Humidity: ${response.data.temperature.humidity}%`;
   windElement.innerHTML = `Wind: ${response.data.wind.speed}mph`;
   timeElement.innerHTML = `| ${formatDate(date)}`;
   iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-app-emoji" />`;
 
   getForecast(response.data.city);
+}
+
+function toTitleCase(string) {
+  return string.replace(/\w\S*/g, function (txt) {
+    return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+  });
 }
 
 //Weather City and Date header
